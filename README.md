@@ -30,7 +30,7 @@ python3 gen_captcha.py
 ![captcha_exmaple](./data/captcha/00001.jpg)
 
 #### Captcha crack
-Here we implement a simple CNN model with keras for captcha image classification. You can try different models like ctc loss or mant others. A single model to classify both 5 and 6 digits can only achieve 70% accuracy in online testing. Therefor,  we have to first classify whether it is 5 or 6 digits and then do the text recognition. This requires three models [cnn_split.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/cnn-split.ipynb), [cnn_5.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/cnn_5.ipynb), [cnn_6.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/cnn_6.ipynb)
+Here we implement a simple CNN model with keras for captcha image classification. You can try different models like ctc loss or many others. A same single CNN model to classify both 5 and 6 digits can only achieve 70% accuracy in online testing. Therefore, we have to first classify whether it is 5 or 6 digits and then do the text recognition. This requires three models [cnn_split.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/cnn-split.ipynb), [cnn_5.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/cnn_5.ipynb), [cnn_6.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/cnn_6.ipynb)
 
 #### Online model testing
 [test_acc.ipynb](https://github.com/j40903272/railway_automation_booking/blob/master/test_acc.ipynb)
