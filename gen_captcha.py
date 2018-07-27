@@ -84,11 +84,8 @@ class captchatext:
 
 def generate(GENNUM, SAVEPATH, ENGP=25, FIVEP=0, ENGNOLIMIT=False):
     captchacsv = open(SAVEPATH + "label.csv", 'w', encoding = 'utf8', newline = '')
-    lencsv = open(SAVEPATH + "len.csv", 'w', encoding = 'utf8', newline = '')
-    
     letterlist = []
-    lenlist = []
-    
+   
     for index in range(1, GENNUM + 1, 1):
         print (index, end='\r')
         captchastr = ""
@@ -108,17 +105,14 @@ def generate(GENNUM, SAVEPATH, ENGP=25, FIVEP=0, ENGNOLIMIT=False):
             offset = newtext.next_offset
             captchastr += str(newtext.letter)
         letterlist.append([str(index).zfill(len(str(GENNUM))), captchastr])
-        lenlist.append([str(index).zfill(len(str(GENNUM))), captchalen])
         for obj in rectlist:
             obj.draw(image=captcha, overlay=True)
         captcha.convert("RGB").save(SAVEPATH + str(index) + ".jpg", "JPEG")
         
     writer = csv.writer(captchacsv)
     writer.writerows(letterlist)
-    writer = csv.writer(lencsv)
-    writer.writerows(lenlist)
     captchacsv.close()
-    lencsv.close()
+    
 
 
 if __name__ == "__main__":
