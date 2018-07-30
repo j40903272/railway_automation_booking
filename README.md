@@ -23,7 +23,7 @@ https://github.com/j40903272/railway_automation_booking
 [Selenium](https://www.seleniumhq.org/projects/webdriver/) supports many webdrivers and here we use [Chrome webdriver](http://chromedriver.chromium.org/downloads). Download the version that matches your OS and browser version into this directory.
 
 #### Gernerate captcha data
-Run the following command to generate 131072 self-made captcha which is very similar to the real ones. The generated captcha image would be in [data/captcha](https://github.com/j40903272/railway_automation_booking/tree/master/data/captcha). The labels of these captcha would be in [data/captcha/label.csv]().
+Run the following command to generate 131072 self-made captcha images which is very similar to the real ones. The generated captcha images would be in [data/captcha](https://github.com/j40903272/railway_automation_booking/tree/master/data/captcha). The labels of these captcha would be in [data/captcha/label.csv]().
 ```
 python3 gen_captcha.py
 ```
